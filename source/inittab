@@ -1,0 +1,15 @@
+::sysinit:/init
+
+# Login /bin/sh invocations on selected ttys.
+#
+# Start an "askfirst" shell on the console (whatever that may be)
+tty1::askfirst:-/bin/sh
+# Start an "askfirst" shell on /dev/tty2-6
+tty2::askfirst:-/bin/sh
+tty3::askfirst:-/bin/sh
+tty4::askfirst:-/bin/sh
+tty5::askfirst:-/bin/sh
+tty6::askfirst:-/bin/sh
+::ctrlaltdel:/sbin/reboot
+::shutdown:/bin/umount -a -r
+::restart:/sbin/init
